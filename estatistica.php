@@ -54,6 +54,14 @@
             foreach ($dados as $x){
                 $x2 = pow($x,2);
                 $cal = $x - $xb;
+                
+                
+                //
+                $x2 = number_format($x2, 2);
+                $cal = number_format($cal, 2);
+                $x = number_format($x, 2);
+                $xb = number_format($xb, 2);
+                
                 echo
                 "<tr>
                 <th scope='row'>$i</th>
@@ -65,6 +73,7 @@
                 $xtotal = $xtotal + $x;
                 $x2total = $x2total + pow($cal, 2);
             }
+            $x2total = number_format($x2total, 2);
             echo "<tr class='table-dark'>
         <td colspan='3' class='table-dark font-weight-bold text-dark'>Total: </td>
         <td class='table-dark font-weight-bold text-primary'>$x2total</td>
